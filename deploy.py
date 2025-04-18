@@ -76,7 +76,7 @@ def add_footer():
     st.markdown(footer, unsafe_allow_html=True)
 
 # Load the model and vectorizer
-@st.cache(allow_output_mutation=True)
+@st.cache_resource
 def load_model_and_vectorizer():
     model = joblib.load('./updated_svm_model.joblib')
     
